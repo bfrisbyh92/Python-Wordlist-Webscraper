@@ -3,10 +3,10 @@ import requests
 from colorama import Back, Fore
 
 # URL to scrape
-url = input( "Enter the URL to scrape: \n")
+url = input(Fore.BLACK + Back.WHITE + "Enter the URL to scrape: \n")
 
 # get user input for minimum word length
-min_length = int(input("Enter the minimum length of words to keep: "))
+min_length = int(input(Fore.BLACK + Back.WHITE + "Enter the minimum length of words to keep: "))
 
 # create an empty list to store all the words
 all_words = []
@@ -34,4 +34,4 @@ with open('words.txt', 'a') as file:
     for word in all_words:
         file.write(word + '\n')
 
-print(Fore.WHITE + Back.GREEN + f'{len(all_words)} words saved to words.txt')
+print(Fore.BLACK + Back.WHITE + f'{len(all_words)} words saved to words.txt')
